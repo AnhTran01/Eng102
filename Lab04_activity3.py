@@ -16,14 +16,16 @@ sysBP = int(input("Enter your total Systolic BP: "))
 point = 0
 risk = 0
 
-#test case
-#Female; Age: 37; Age-based score: -3
-if (age == 37):
-    point += -3
-    if(totCol == 250):
+#test case goes here
+if (29 <= age <= 34):
+    point += -7
+    if(totCol < 160):
+        point += 0
+    elif(160 <= totCol <= 199):
+        point += 4
+    elif(200<= totCol <=239):
+        point += 8
+    elif(240<= totCol <=279):
         point += 11
-elif(age == 71):
-    point += 14
-    if(totCol == 170):
-        point += 1
-elif
+    else:
+        point += 13
