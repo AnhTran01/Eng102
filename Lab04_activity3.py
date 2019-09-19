@@ -10,7 +10,7 @@
 #Variable
 age = int(input("Enter your age: "))
 totCol = int(input("Enter your total cholestoral: "))
-smoker = input("Do you smoke, Y for Yes, N for No")
+smoker = input("Do you smoke, Y for Yes, N for No: ")
 HDL = int(input("Enter your total HDL: "))
 sysBP = int(input("Enter your total Systolic BP: "))
 point = 0
@@ -27,5 +27,10 @@ if (29 <= age <= 34):
         point += 8
     elif(240<= totCol <=279):
         point += 11
-    else:
+    elif(totCol > 279):
         point += 13
+    elif(smoker == 'Y'):
+        points += 0
+    elif(smoker == 'N'):
+        point  += 1
+    elif()
